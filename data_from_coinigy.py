@@ -3,6 +3,7 @@ import json
 import time
 import pandas as pd
 from datetime import datetime
+import os
 
 pd.options.display.float_format = '{:,.8f}'.format # 
 
@@ -35,8 +36,8 @@ ZEC = """
 """
 headers = {
   'Content-Type': 'application/json',
-  'X-API-KEY': 'f4d54af4b45105f9ddd4d0c6447c160e',
-  'X-API-SECRET': 'd0a13966bb8f9661d8795b551301f4ad'
+  'X-API-KEY': os.environ['COINIGY_API_KEY'],
+  'X-API-SECRET': os.environ['COINIGY_API_SECRET']
 }
 
 
